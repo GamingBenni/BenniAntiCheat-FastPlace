@@ -17,7 +17,7 @@ public class FastPlace implements Listener {
 	public void onBlockPlaceEvent(BlockPlaceEvent e) {
 		if(listContainsPlayer(e.getPlayer())) {
 			addOnePlace(e.getPlayer());
-			if(getPlayerCount(e.getPlayer()) >= 9) {
+			if(getPlayerCount(e.getPlayer()) >= 10) {
 				Bukkit.getPluginManager().callEvent(new PlayerCheatEvent(e.getPlayer(), "FastPlace"));
 			}
 		} else {
